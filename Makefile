@@ -2,7 +2,7 @@ build : compile
 	./hash
 
 compile : 
-	gcc -o hash src/main.c src/hash_table.c 
+	gcc -o hash  src/main.c src/hash_table.c  -lm 
 
 valgrind : ./hash
 	valgrind ./hash
@@ -15,5 +15,5 @@ commit : add
 	read commit_message
 	git  commit -m $commit_message 
 
-push : commit 
-	git push
+push : commit
+		git push
