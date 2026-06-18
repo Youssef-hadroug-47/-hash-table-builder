@@ -11,7 +11,8 @@ add : ./.git
 	git add .
 
 commit : add 
-	read -p -n 'Enter a meaningful comming message :\n + ' commit_message
+	echo -n "Add a meaningful commint message :\n + "
+	read commit_message
 	git  commit -m $commit_message 
 
 push : commit 
