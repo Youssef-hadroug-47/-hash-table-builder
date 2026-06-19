@@ -21,3 +21,7 @@
 ```
     make -s build
 ```
+
+> [!NOTE] PS:
+> This algorithm is not the best so far. It actually abuses memory heavily. 
+> Infinite loops also occur very often.  

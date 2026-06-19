@@ -2,10 +2,10 @@ build : compile
 	./hash
 
 compile : 
-	gcc -o hash  src/main.c src/hash_table.c  -lm 
+	gcc -o hash  src/main.c src/hash_table.c src/prime.c  -lm 
 
-valgrind : ./hash
-	valgrind ./hash
+valgrind : 
+	valgrind --leak-check=full ./hash
 
 add : ./.git
 	git add .
